@@ -197,5 +197,19 @@ footer h1{
      .output{
          font-size: 10pt;
      }
+     .output input[type=submit]{
+        width: 30%;
+        background-image: url('credit-card.png');
+        background-size: 25%;
+        background-position: 15px;
+        background-repeat: no-repeat;
+    }
+     footer h1{
+        font-size: 25pt;
+        margin-top: 1%;
+        margin-bottom: 2%;
+        font-weight: bold;
+        color: white;
+    }
     
 }
