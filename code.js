@@ -32,9 +32,24 @@ function calculate() {
 }
 
 function calcper(){
+
+    //variables input
+    let tipRange = document.getElementById("range-print").value;
+    let amount = Number(document.getElementById("amount").value);
+
+    //VARIABLES OUTPUT 
+    let totalTip = document.getElementById("output-justTip");
+    let totalAmountTip = document.getElementById("output-total");
+
+    //calculates the totals and dispalys
+    let tip = (tipRange / 100)
+    totalTip.value = Number(amount * tip).toFixed(2);
+    totalAmountTip.value = Number(amount + Number(totalTip.value)).toFixed(2);
+
+    //SETS VALUE OF THE RANGE TO THE TEXT BOX
     let txt = (document.getElementById("range-print").value);
     document.getElementById("tip-range").value = (txt) ;
-   console.log (txt.value = (document.getElementById("tip-range").value))
+    console.log (txt.value = (document.getElementById("tip-range").value))
     display();
 }
 
