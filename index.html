@@ -1,5 +1,6 @@
 <DOCTYPE html>
-<html>
+    <html>
+
     <head lang="en">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,69 +10,64 @@
         <link rel="stylesheet" href="style.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-        <!--Icon-->
-        <link rel="icon" type="image/png" href="calculator-icon_34473.ico">
-        <title>Tip Calulator</title>
+        <!--Icon and Title-->
+        <link rel="icon" href="Martin-Berube-Food-Tomato.ico?">
+        <title>Pomodoro Clock</title>
     </head>
 
-    <header>
-        <h1>Tip Calculator</h1>
+    <header id="header-content">
+        <div class="title">
+            <h1>THE <strong>POMODORO</strong> METHOD</h1>
+            <h3>Study More Efficiently</h3>
+        </div>
+        <div class="button">
+            <a href="#main">LEARN MORE</a>
+        </div>
     </header>
+
     <body>
-        <main>
-            <div class="tip">
-                <form id='input'>
-                    <div class="input-area">
-                        <label>Total Amount</label>
-                        <div class="align">
-                            <span id="span">$
-                                <input type="number" step="0.01" placeholder="Total Amount" id="amount"
-                                    onchange="calculate()" required>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="input-area">
-                        <label>Tip: </label>
-                        <input type="range" value="0" id="tip-range" onchange="calculate()">
-                        <div class="d">
-                            <div class="rangeInput">
-                                <span id="span">%
-                                    <input type="text" id="range-print" onchange="calcper()" placeholder="0">
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+        <main id="main">
+            <section id="explination">
+                <h1>What is the Pomodoro Method?</h1>
+                <p>The Pomodoro Technique was developed in the late 1980s by then university student Francesco Cirillo.
+                    Cirillo was struggling to focus on his studies and complete assignments. Feeling overwhelmed, he
+                    asked himself to commit to just 10 minutes of focused study time. Encouraged by the challenge, he
+                    found a tomato (pomodoro in Italian) shaped kitchen timer, and the Pomodoro technique was born.</p>
 
-                <div class="divider"></div>
+                <iframe width="1280" height="600" src="https://www.youtube.com/embed/mNBmG24djoY"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen id="video">
+                </iframe>
+                <div class="line"></div>
+                <div class="center">
+                    <a href="#pomodoro">TRY IT OUT</a>
+                </div>
+            </section>
 
-                <form id="output-area">
-                    <h1>Results</h1>
-                    <div class="output">
-
-                        <label>Total Tip </label>
-                        <div class="align">
-                            <span id="span">$
-                                <input type="number" id="output-justTip" disabled>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="output">
-                        <label>Total Amount with Tip </label>
-                        <div class="align">
-                            <span id="span">$
-                                <input type="number" id="output-total" disabled required></span>
-                        </div>
-                    </div>
-                    <div class="output">
-                        <input type="submit" onclick="pay()" value="Pay" href="credit-card.png">
-                    </div>
-                </form>
-            </div>
+            <section id="pomodoro">
+                <div class="input">
+                    <form onsubmit="return false;">
+                        <h1>The Pomodoro Timer</h1>
+                        <p>Press <strong> Click Here</strong> to start the Pomodoro Timer</p>
+                        <label>Sessions Length in minutes:</label><input type="number" id="input" value="25" required>
+                        <input type="submit" onclick="algo()" value="Click Here">
+                    </form>
+                </div>
+                <div class="progress-center">
+                    <progress value="0" max="1000" id="progressBar"></progress>
+                    <embed src="success.wav" autostart="false" width="0" height="0" id="sound1"
+                    enablejavascript="true">
+                </div>
+            </section>
+            <footer>
+                <h1>Jose Amarante &copy; 2021 </h1>
+            </footer>
         </main>
+
+
+
     </body>
-<div class="do"></div>
-    <footer id="footer">
-        <h1>Jose Amarante &copy; 2021</h1>
-    </footer>
-</html>
+
+
+    </html>
